@@ -1,0 +1,15 @@
+2024-05-09 17:53:01.476 [info] 
+
+
+
+
+2024-05-09 17:53:01.548 [info] Extension host agent started.
+2024-05-09 17:53:01.917 [info] [127.0.0.1][ede4ff71][ManagementConnection] New connection established.
+2024-05-09 17:53:03.073 [info] [127.0.0.1][f76e4c08][ExtensionHostConnection] New connection established.
+2024-05-09 17:53:03.117 [info] [127.0.0.1][f76e4c08][ExtensionHostConnection] <534> Launched Extension Host Process.
+2024-05-09 17:54:15.840 [info] [127.0.0.1][f76e4c08][ExtensionHostConnection] <534> [0mGET /assets/plugins/smoothscroll.js [33m404[0m 8.379 ms - 169[0m
+
+2024-05-09 17:54:16.800 [info] [127.0.0.1][f76e4c08][ExtensionHostConnection] <534> [0mGET /favicon.ico [33m404[0m 2.871 ms - 150[0m
+
+2024-05-09 17:59:36.217 [info] [127.0.0.1][ede4ff71][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-05-09 17:59:36.446 [info] [127.0.0.1][f76e4c08][ExtensionHostConnection] <534> Extension Host Process exited with code: 0, signal: null.

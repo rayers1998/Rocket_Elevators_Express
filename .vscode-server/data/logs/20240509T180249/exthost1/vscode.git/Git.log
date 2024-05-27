@@ -1,0 +1,30 @@
+2024-05-09 18:02:56.437 [info] Log level: Info
+2024-05-09 18:02:56.437 [info] Validating found git in: "git"
+2024-05-09 18:02:56.437 [info] Using git "2.34.1" from "git"
+2024-05-09 18:02:56.437 [info] > git rev-parse --show-toplevel [19ms]
+2024-05-09 18:02:56.437 [info] fatal: not a git repository (or any of the parent directories): .git
+2024-05-09 18:02:56.449 [info] > git rev-parse --show-toplevel [17ms]
+2024-05-09 18:02:56.478 [info] > git rev-parse --git-dir --git-common-dir [4ms]
+2024-05-09 18:02:56.589 [info] Open repository: /home/rayers/local_repo/codebox/RocketElevatorsDigitalPresence
+2024-05-09 18:02:56.910 [info] > git config --get commit.template [267ms]
+2024-05-09 18:02:56.987 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/develop refs/remotes/develop [37ms]
+2024-05-09 18:02:57.036 [info] > git status -z -uall [24ms]
+2024-05-09 18:02:57.130 [info] > git merge-base refs/heads/develop refs/remotes/origin/develop [67ms]
+2024-05-09 18:02:57.163 [info] > git config --get commit.template [36ms]
+2024-05-09 18:02:57.168 [info] > git rev-list --count --left-right refs/heads/develop...refs/remotes/origin/develop [14ms]
+2024-05-09 18:02:57.228 [info] > git check-ignore -v -z --stdin [25ms]
+2024-05-09 18:02:57.255 [info] > git diff --name-status -z --diff-filter=ADMR c9095a826702ce5f7c7ac38432c1578211694ac6...refs/remotes/origin/develop [66ms]
+2024-05-09 18:02:57.267 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/develop refs/remotes/develop [43ms]
+2024-05-09 18:02:57.304 [info] > git status -z -uall [21ms]
+2024-05-09 18:02:57.528 [info] > git show --textconv :quote.html [33ms]
+2024-05-09 18:02:57.536 [info] > git ls-files --stage -- /home/rayers/local_repo/codebox/RocketElevatorsDigitalPresence/quote.html [13ms]
+2024-05-09 18:02:57.553 [info] > git cat-file -s 1d3fd5085ab564fb0d686cf6a0fd891d0c63f7b1 [3ms]
+2024-05-09 18:03:12.235 [info] > git show --textconv :quotetest.html [10ms]
+2024-05-09 18:03:12.237 [info] > git ls-files --stage -- /home/rayers/local_repo/codebox/RocketElevatorsDigitalPresence/quotetest.html [4ms]
+2024-05-09 18:03:12.246 [info] > git cat-file -s 78f566585ea5d29ed3b60ac25bfe78acace35a42 [2ms]
+2024-05-09 18:04:20.697 [info] > git show --textconv :quote.html [7ms]
+2024-05-09 18:04:20.700 [info] > git ls-files --stage -- /home/rayers/local_repo/codebox/RocketElevatorsDigitalPresence/quote.html [3ms]
+2024-05-09 18:04:20.707 [info] > git cat-file -s 1d3fd5085ab564fb0d686cf6a0fd891d0c63f7b1 [2ms]
+2024-05-09 18:04:41.139 [info] > git show --textconv :quotetest.html [8ms]
+2024-05-09 18:04:41.141 [info] > git ls-files --stage -- /home/rayers/local_repo/codebox/RocketElevatorsDigitalPresence/quotetest.html [3ms]
+2024-05-09 18:04:41.148 [info] > git cat-file -s 78f566585ea5d29ed3b60ac25bfe78acace35a42 [2ms]
