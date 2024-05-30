@@ -73,6 +73,13 @@
 
  ** ************************************* **/
 
+/* essentials.css - font-famlily is placed on the essentials.css page b/c I want the font to be applied globally or to essential elements across the site. */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 /**	01. Resets
 *************************************************** **/
 button::-moz-focus-inner,

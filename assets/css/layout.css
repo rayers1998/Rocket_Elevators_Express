@@ -49,6 +49,13 @@
 		DEMO ONLY [remove on production]
 *************************************************** **/
 
+
+/* layout.css - font-famlily is placed on the layout.css page b/c I want the font to be applied to layout-specific elements. 
+body {
+    font-family: 'Roboto', sans-serif;
+} */
+
+
 /** Globals
  **************************************************************** **/
 html,
