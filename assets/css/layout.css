@@ -64,7 +64,7 @@ body {
     direction: ltr;
 }
 body {
-    color: #666;
+    color: #0a65a0;
     background-color: #fff;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -9062,11 +9062,11 @@ section.dark .alternate-2,
 section.dark .alternate-3,
 section.dark .lightblue,
 section.dark .lightgreen {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: #0a65a0;
 }
 
 section.dark-2.alternate {
-    background-color: #292e32 !important;
+    background-color: #0a65a0;
 }
 
 /** Footer

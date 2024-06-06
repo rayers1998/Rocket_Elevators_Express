@@ -18,6 +18,7 @@
 
 		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/index.css" rel="stylesheet" type="text/css" />
 
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
@@ -25,7 +26,33 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
-	
+		
+	<!--Changes the background color of the CEO and Employee of the Month section.-->
+		<style>
+			#team.section-xs.dark {
+				background-color: #0a65a0 !important;
+			}
+		</style>
+ 
+ <style>
+	/* Ensure the entire footer background is blue */
+	footer#footer {
+		background-color: #0a65a0 !important;
+	}
+	footer#footer .container {
+		background-color: #0a65a0 !important;
+	}
+	.footer-disclaimer {
+		background-color: #0a65a0 !important;
+	}
+	.copyright {
+		background-color: #0a65a0 !important;
+	}
+	#footer .row {
+		background-color: #0a65a0 !important;
+	}
+</style>
+
 	 </head>
 
 	<body class="smoothscroll enable-animation">
@@ -308,23 +335,31 @@
 					</div>
 				</div>
 			</section>
-
+			
 			<section class="parallax parallax-1" style="background-image: url('assets/images/rocketElevators/businessSince.jpeg');">
 				<div class="overlay dark-7"></div>
 				<div class="container">
 					<div class="text-center">
-						<h2 class="fs-40 fw-300"><strong>Elevating Innovation, Safety, & Style since 1976</strong></h2>
-						<a class="btn btn-outline-primary btn-lg" href="quote.html">REQUEST QUOTE <i class="fa fa-angle-right"></i></a> 
+						<h2 class="fs-40 fw-300"><strong>Elevating Innovation, Safety, & Style since <span style="font-size: 1.5em; color: #A94545; font-weight: bold; font-style: italic;">1976</span>
+						</strong></h2>
+						
+						<a class="btn btn-outline-primary btn-lg blueBorderButton" href="quote.html" onmouseover="this.style.backgroundColor='#0a65a0'">REQUEST QUOTE <i class="fa fa-angle-right"></i></a> 
+						&nbsp; OR &nbsp; 
+						<a class="btn btn-outline-danger btn-lg redBorderButton" href="#contact"  onmouseover="this.style.backgroundColor='#EA353D'">CONTACT US <i class="fa fa-angle-right"></i></a>
+					</div>					
+						
+						
+						<!--<a class="btn btn-outline-primary btn-lg" href="quote.html">REQUEST QUOTE <i class="fa fa-angle-right"></i></a> 
 						&nbsp; OR &nbsp; 
 						<a class="btn btn-outline-danger btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
-					</div>
+					</div>-->
 				</div>
 			</section>
 
 			<section id="portfolio">
 				<div class="container">
 					<div class="heading-title heading-dotted text-center">
-						<h2>Company Highlights</h2>
+						<h2 style="color: #0a65a0;">Company Highlights</h2>
 					</div>
 					<div class="text-center">
 						<ul class="nav nav-pills mix-filter mb-60">
@@ -543,7 +578,8 @@
 				</div>
 			</section>
 
-			<section id="team" class="section-xs dark">
+			
+			<section id="team" class="section-xs dark"> 
 				<div class="container">
 					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
 
@@ -579,8 +615,9 @@
 			<section id="news">
 				<div class="container">
 
+					
                     <div class="heading-title heading-dotted text-center">
-						<h2>Latest News & Press Releases</h2>
+						<h2 style="color: #0a65a0;">Latest News & Press Releases</h2>
 					</div>
 					<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
 
@@ -679,10 +716,13 @@
 				</div>
 			</section>
 
+			
+
 			<section id="clients" class="alternate">
 				<div class="container">
 					<div class="heading-title heading-dotted text-center">
-						<h2>Our Valued Clients</h2>
+						<h2 style="color: #0a65a0;">Our Valued Clients</h2>
+						
 					</div>
 
 					<ul class="row clients-dotted list-inline">
@@ -751,13 +791,15 @@
 				</div>
 			</section>
 
+
+            <!---------CONTACT US TODAY SECTION--------->
 			<section id="contact">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-sm-8">
 
 							<header class="text-center mb-60">
-								<h2>Contact Us Today</h2>
+								<h2 style="color: #0a65a0;">Contact Us Today</h2>
 								<hr />
 							</header>
 
@@ -772,11 +814,13 @@
 							</div>
 
 							<div id="alert_mandatory" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<button type="button" class="close" data-dismiss="alert" ari a-hidden="true">&times;</button>
 								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
 							</div>
 
 
+
+							<!----------------CONTACT FORM ---------------->
 							<form id="contact-form">
 								<fieldset>
 									<input type="hidden" name="action" value="contact_send" />
@@ -849,7 +893,7 @@
 						<div class="col-md-4 col-sm-4" style="padding-left: 5%">
 
 							<header class="text-center mb-60">
-								<h2>Visit Us</h2>
+								<h2 style="color: #0a65a0;">Visit Us</h2>
 								<hr />
 							</header>
 							
@@ -857,7 +901,7 @@
 						
 							<p style="padding-top: 10%">
 								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 4468 Wellington St Suite 204, Verdun, Quebec H4G 1W5</span>
-								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:418-555-1234">(418) 555-1234</a></span>
+								<span class="block"><strong><i class="fa fa-phone"> </i> Phone:</strong> <a href="tel:418-555-1234">(418) 555-1234</a></span>
 								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
 								<span class="block"><strong>
 									<i class="fa fa-clock-o" aria-hidden="true"></i> 
@@ -870,7 +914,7 @@
 										<li>Wednesday: 9:00 - 17:00</li>
 										<li>Thursday: 9:00 - 17:00</li>
 										<li>Friday: 9:00 - 17:00</li>
-										<li>Saturday: 12:00 - 17:00</li>
+										<li><b>Saturday: 12:00 - 17:00</b></li>
 									</ul>
 								</span>
 							</p>
@@ -879,6 +923,7 @@
 				</div>
 			</section>
 
+			
 			<div class="modal fade" id="success-message" role="dialog">
 				<div class="modal-dialog">				
 				<div class="modal-content">
@@ -928,8 +973,9 @@
 				</div>
 			</div>
 
-			<footer id="footer">
-				<div class="container">
+			<footer id="footer" class="aaa">
+						<h2>Our Valued Clients</h2>
+						<div class="container">
 					<div class="row">
 						<div class="col-md-8">
 							<h3 class="letter-spacing-1">WHY US?</h3>
@@ -961,7 +1007,7 @@
 					</div>
 				</div>
 				<div class="copyright">
-					<div class="container">
+					<div class="container" style="background-color: #A94545;">
 						&copy; All Rights Reserved, Rocket Elevators <br>
 						Disclaimer: This website was developed for educational purpose only. 
 						The content presented herein is fictional. 

@@ -17316,6 +17316,10 @@ footer .countdown.bordered .countdown-amount {
 
 /**	20. Clients
 *************************************************** **/
+.clients {
+    position: relative; /* Ensure the container is relative to use absolute positioning for its children */
+}
+
 #clients .logo-crop {
     display: flex;
     justify-content: center;
@@ -17326,12 +17330,20 @@ footer .countdown.bordered .countdown-amount {
 
 ul.clients-dotted {
     overflow: hidden;
-}
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for better alignment */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the items horizontally */
+} 
+
 ul.clients-dotted > li {
     text-align: center;
     padding-top: 30px;
-    padding-bottom: 30px;
-    display: inline-block;
+    margin: 20px;
+    /*display: inline-block;*/
+    position: relative; /* Ensure the dotted lines are positioned correctly */ ;
 }
 ul.clients-dotted > li a {
     text-align: center;
@@ -17339,17 +17351,17 @@ ul.clients-dotted > li a {
 }
 ul.clients-dotted > li img {
     display: inline-block;
+    max-width: 100%; /* Ensure the images are responsive */
 }
 ul.clients-dotted > li:after {
     content: "";
     position: absolute;
-
     width: 100%;
     height: 0;
     top: auto;
     left: 0;
     bottom: -1px;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 ul.clients-dotted > li:before {
     content: "";
@@ -17357,7 +17369,15 @@ ul.clients-dotted > li:before {
     height: 100%;
     top: 0;
     left: -1px;
-    border-left: 1px dashed rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    ul.clients-dotted > li {
+        padding: 15px;
+        margin: 10px; /* Adjust margin for smaller screens */
+    }
 }
 
 /**	21. Alerts
@@ -19013,6 +19033,15 @@ span.badge-dark,
 .card {
     margin-bottom: 30px;
 }
+
+
+
+
+
+
+
+
+
 section.dark .card-default > .card-heading {
     border-color: #666;
 }

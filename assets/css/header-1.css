@@ -102,6 +102,23 @@
 		}
 }
 
+/* Ensure the entire footer background is blue */
+footer#footer {
+	background-color: #0a65a0 !important;
+}
+footer#footer .container {
+	background-color: #0a65a0 !important;
+}
+.footer-disclaimer {
+	background-color: #0a65a0 !important;
+}
+.copyright {
+	background-color: #0a65a0 !important;
+}
+#footer .row {
+	background-color: #0a65a0 !important;
+}
+
 /* header.css - font-famlily is placed on the header.css page b/c I want the font to be applied specifically to the header elements. 
 body {
     font-family: 'Roboto', sans-serif;

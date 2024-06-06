@@ -22,7 +22,7 @@ let maxOcc_input = document
 let displayCalcElv_input = document
     .getElementById("elevator-amount")
     .querySelector("input");
-
+  
 let productLineSelection_div = document.querySelector(".product-line");
 let radioBtns_div = document.querySelector(".radio-btns");
 let warning_p = document.getElementById("warning");
@@ -128,6 +128,9 @@ function displayBuildingFields(buildingType) {
     }
     productLineSelection_div.style.display = "block";
     finalPricingDisplay_div.style.display = "block";
+
+ // Set the card header color based on the building type
+ setCardHeaderColor(buildingType);
 }
 
 function displayElvCalcResult(buildingType) {
@@ -221,3 +224,55 @@ buildingType_select.addEventListener("change", function () {
         });
     }
 });
+
+///////////////////////////////////// Request Quote Page - Change colors based on type building selected! /////////////////////////////////////
+
+
+// Listen to the DOMContentLoaded event to ensure the DOM is fully loaded before running the script
+document.addEventListener("DOMContentLoaded", function() {
+    // Listen for changes on the building type selection item
+    document.getElementById("building-type").addEventListener("change", function() {
+        // Get selected value from building type selection item
+        var selectedBuildingType = this.value;
+
+        // Get the target element to change the background color
+        var targetElement = document.getElementById("quote-form");
+        
+        // Check the selected building type and change the background color accordingly
+        if (selectedBuildingType === "residential") {
+            targetElement.style.backgroundColor = "#B8CDDB"; // Example color for residential
+        } else if (selectedBuildingType === "commercial") {
+            targetElement.style.backgroundColor = "#BA7C7C"; // Example color for commercial
+        } else if (selectedBuildingType === "industrial") {
+            targetElement.style.backgroundColor = "#818181"; // Example color for industrial
+        } else {
+            targetElement.style.backgroundColor = "transparent"; // Default or no selection
+        }
+    });
+});
+
+// Another event listener for the DOMContentLoaded event
+document.addEventListener("DOMContentLoaded", function() {
+    // Listen for changes on the building type selection item
+    document.getElementById("building-type").addEventListener("change", function() {
+        // Get selected value from building type selection item
+        var selectedBuildingType = this.value;
+
+        // Get all headers with the "card-heading" class
+        var headers = document.querySelectorAll(".card-heading");
+
+        // Set colors for each building type
+        var colors = {
+            residential: "#E9E8E8", // light Gray
+            commercial: "#E9E8E8", // light Gray
+            industrial: "#E9E8E8"  // light Gray
+        };
+        
+        // Change the background color of each header based on the selected building type
+        headers.forEach(function(header) {
+            header.style.backgroundColor = colors[selectedBuildingType] || "transparent"; // Use the color or default to transparent
+        });
+    });
+});
+
+
