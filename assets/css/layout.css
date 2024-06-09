@@ -9071,13 +9071,15 @@ section.dark-2.alternate {
 
 /** Footer
  **************************************************************** **/
-#footer {
+ /** Line 9080 using !important ensures the footer is blue.**/
+ /** Line 9081 linear-gradient shades the blue footer**/
+ #footer {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
     display: block;
+    background: #0a65a0 !important;
+    background: linear-gradient(to bottom, #0a65a0 0%, #004080 100%) !important; /* Shaded blue gradient */
 
-    background: #313131;
-    background: -moz-linear-gradient(top, #555555 0%, #313131 100%);
     background: -webkit-gradient(
         linear,
         left top,
@@ -9091,6 +9093,9 @@ section.dark-2.alternate {
     background: linear-gradient(to bottom, #555555 0%, #313131 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#313131',GradientType=0 );
 }
+ 
+
+
 #footer > .container {
     padding-top: 60px;
     margin-bottom: 60px;

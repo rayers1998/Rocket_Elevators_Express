@@ -27,32 +27,16 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
 		
-	<!--Changes the background color of the CEO and Employee of the Month section.-->
-		<style>
-			#team.section-xs.dark {
-				background-color: #0a65a0 !important;
-			}
-		</style>
- 
- <style>
-	/* Ensure the entire footer background is blue */
-	footer#footer {
-		background-color: #0a65a0 !important;
-	}
-	footer#footer .container {
-		background-color: #0a65a0 !important;
-	}
-	.footer-disclaimer {
-		background-color: #0a65a0 !important;
-	}
-	.copyright {
-		background-color: #0a65a0 !important;
-	}
-	#footer .row {
-		background-color: #0a65a0 !important;
-	}
-</style>
-
+	 <!--Changes the background color of the CEO and Employee of the Month section.-->
+	 <style>
+        #team.section-xs.dark {
+            background-color: #0a65a0 !important;
+        }
+        #portfolio .item-box {
+            margin-bottom: 20px !important; /* Adjust the value as needed */
+        }
+    </style>
+	
 	 </head>
 
 	<body class="smoothscroll enable-animation">
@@ -793,135 +777,131 @@
 
 
             <!---------CONTACT US TODAY SECTION--------->
-			<section id="contact">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-sm-8">
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8">
 
-							<header class="text-center mb-60">
-								<h2 style="color: #0a65a0;">Contact Us Today</h2>
-								<hr />
-							</header>
+                <header class="text-center mb-60">
+                    <h2 style="color: #0a65a0;">Contact Us Today</h2>
+                    <hr />
+                </header>
 
-							<div id="alert_success" class="alert alert-success mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>Thank You!</strong> Your message successfully sent!
-							</div>
+                <div id="alert_success" class="alert alert-success mb-30">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Thank You!</strong> Your message successfully sent!
+                </div>
 
-							<div id="alert_failed" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>[SMTP] Error!</strong> Internal server error!
-							</div>
+                <div id="alert_failed" class="alert alert-danger mb-30">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>[SMTP] Error!</strong> Internal server error!
+                </div>
 
-							<div id="alert_mandatory" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" ari a-hidden="true">&times;</button>
-								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-							</div>
+                <div id="alert_mandatory" class="alert alert-danger mb-30">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+                </div>
 
+                <!----------------CONTACT FORM ---------------->
+                <form id="contact-form">
+                    <fieldset>
+                        <input type="hidden" name="action" value="contact_send" />
 
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="name" style="color: black;">Full Name</label>
+                                <input id="name" type="text" value="" class="form-control" name="contact[name]">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="email" style="color: black;">E-mail Address</label>
+                                <input id="email" type="email" value="" class="form-control" name="contact[email]">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="phone" style="color: black;">Phone</label>
+                                <input id="phone" type="text" value="" class="form-control" name="contact[phone]">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="company_name" style="color: black;">Company Name</label>
+                                <input id="company_name" type="text" value="" class="form-control" name="contact[company_name]">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="project_name" style="color: black;">Project Name</label>
+                                <input id="project_name" type="text" value="" class="form-control" name="contact[project_name]">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="project_description" style="color: black;">Project Description</label>
+                                <input id="project_description" type="text" value="" class="form-control" name="contact[project_description]">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="department" style="color: black;">Department</label>
+                                <select id="department" class="form-control pointer" name="contact[department]">
+                                    <option value="">--- Select ---</option>
+                                    <option value="Marketing">Commercial</option>
+                                    <option value="Webdesign">Residential</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="message" style="color: black;">Message</label>
+                                <textarea id="message" maxlength="10000" rows="8" class="form-control" name="contact[message]"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="attachment" style="color: black;">File Attachment</label>
+                                <input id="attachment" class="custom-file-upload" type="file" name="contact[attachment]" data-btn-text="Select a File" />
+                                <small class="text-muted block">
+                                    Max file size: 10Mb (zip/pdf/jpg/png)
+                                </small>
+                            </div>
+                        </div>
 
-							<!----------------CONTACT FORM ---------------->
-							<form id="contact-form">
-								<fieldset>
-									<input type="hidden" name="action" value="contact_send" />
+                    </fieldset>
 
-									<div class="row">
-											<div class="col-md-4">
-												<label for="name">Full Name</label>
-												<input id="name" type="text" value="" class="form-control" name="contact[name]">
-											</div>
-											<div class="col-md-4">
-												<label for="email">E-mail Address</label>
-												<input id="email" type="email" value="" class="form-control" name="contact[email]">
-											</div>
-											<div class="col-md-4">
-												<label for="phone">Phone</label>
-												<input id="phone" type="text" value="" class="form-control" name="contact[phone]">
-											</div>
-									</div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="company_name">Company Name</label>
-                                            <input id="name"  type="text" value="" class="form-control" name="contact[name]">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="project_name">Project Name</label>
-                                            <input id="project_name"  type="text" value="" class="form-control" name="contact[name]">
-                                        </div>
-                                    </div>
-									<div class="row">
-											<div class="col-md-6">
-                                                <label for="project_description">Project Description</label>
-												<input id="project_description"  type="text" value="" class="form-control" name="contact[subject]">
-											</div>
-											<div class="col-md-6">
-												<label for="department">Department</label>
-												<select id="department" class="form-control pointer" name="contact[department]">
-													<option value="">--- Select ---</option>
-													<option value="Marketing">Commercial</option>
-													<option value="Webdesign">Residential</option>
-												</select>
-											</div>
-									</div>
-									<div class="row">
-											<div class="col-md-12">
-												<label for="message">Message</label>
-												<textarea id="message"  maxlength="10000" rows="8" class="form-control" name="contact[message]"></textarea>
-											</div>
-									</div>
-									<div class="row">
-											<div class="col-md-12">
-												<label for="attachment">File Attachment</label>
-												<input id="attachment" class="custom-file-upload" type="file" name="contact[attachment]"  data-btn-text="Select a File" />
-												<small class="text-muted block">
-                                                    Max file size: 10Mb (zip/pdf/jpg/png)
-                                                </small>
-											</div>
-									</div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-check"></i> SEND MESSAGE</button>
+                        </div>
+                    </div>
+                </form>
 
-								</fieldset>
+            </div>
 
-								<div class="row">
-									<div class="col-md-12">
-										<button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-check"></i> SEND MESSAGE</button>
-									</div>
-								</div>
-							</form>
+            <div class="col-md-4 col-sm-4" style="padding-left: 5%">
 
-						</div>
+                <header class="text-center mb-60">
+                    <h2 style="color: #0a65a0;">Visit Us</h2>
+                    <hr />
+                </header>
 
-						<div class="col-md-4 col-sm-4" style="padding-left: 5%">
+                <img class="img-fluid" src="assets/images/rocketElevators/map.jpg" />
 
-							<header class="text-center mb-60">
-								<h2 style="color: #0a65a0;">Visit Us</h2>
-								<hr />
-							</header>
-							
-							<img class="img-fluid" src="assets/images/rocketElevators/map.jpg"/>
-						
-							<p style="padding-top: 10%">
-								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 4468 Wellington St Suite 204, Verdun, Quebec H4G 1W5</span>
-								<span class="block"><strong><i class="fa fa-phone"> </i> Phone:</strong> <a href="tel:418-555-1234">(418) 555-1234</a></span>
-								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
-								<span class="block"><strong>
-									<i class="fa fa-clock-o" aria-hidden="true"></i> 
-									Business Hours:
-								</strong></span>
-								<span class="block"> 
-									<ul>
-										<li>Monday: 9:00 - 17:00</li>
-										<li>Tuesday: 9:00 - 17:00</li>
-										<li>Wednesday: 9:00 - 17:00</li>
-										<li>Thursday: 9:00 - 17:00</li>
-										<li>Friday: 9:00 - 17:00</li>
-										<li><b>Saturday: 12:00 - 17:00</b></li>
-									</ul>
-								</span>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
+                <p style="padding-top: 10%; color: black;">
+					<span class="block" style="color: #0a65a0;"><strong style="color: black;"><i class="fa fa-map-marker"></i> Address:</strong> <strong>4468 Wellington St Suite 204, Verdun, Quebec H4G 1W5</strong></span>
+					<span class="block" style="color: #0a65a0;"><strong style="color: black;"><i class="fa fa-phone"> </i> Phone:</strong> <a href="tel:418-555-1234" style="color: #0a65a0;"><strong>(418) 555-1234</strong></a></span>
+					<span class="block" style="color: #0a65a0;"><strong style="color: black;"><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz" style="color: #0a65a0;">info@codeboxx.biz</a></span>
+					<span class="block" style="color: #0a65a0;"><strong style="color: black;"><i class="fa fa-clock-o" aria-hidden="true"></i> Business Hours:</strong></span>
+					<span class="block" style="color: #0a65a0;">
+						<ul>
+							<li>Monday: 9:00 - 17:00</li>
+							<li>Tuesday: 9:00 - 17:00</li>
+							<li>Wednesday: 9:00 - 17:00</li>
+							<li>Thursday: 9:00 - 17:00</li>
+							<li>Friday: 9:00 - 17:00</li>
+							<li><strong>Saturday: 12:00 - 17:00</strong></li>
+						</ul>
+					</span>
+				</p>
+				
+            </div>
+        </div>
+    </div>
+</section>
 
 			
 			<div class="modal fade" id="success-message" role="dialog">
@@ -975,7 +955,7 @@
 
 			<footer id="footer" class="aaa">
 						<h2>Our Valued Clients</h2>
-						<div class="container">
+						<div class="container" style="background-color: #0a65a0;">
 					<div class="row">
 						<div class="col-md-8">
 							<h3 class="letter-spacing-1">WHY US?</h3>
