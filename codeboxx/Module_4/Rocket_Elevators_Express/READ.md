@@ -12,11 +12,6 @@ Module 4 - Back End Development 1
 -- It's used to help people understand the purpose of the project, how to install or run it, and where to find more information if they need help. 
 -- Think of it as a guidebook or instruction manual for the project.
 
-## Rocket Elevators Background
--- Rocket Elevators is a company that installs, constructs, and maintains elevators for homes, businesses, and industrial buildings. 
--- Our website features a full range of elevator products designed for different types of buildings. 
--- We also offer a contact form for potential clients to discuss their specific projects with us.
--- This focus on customer service emphasizes the importance of having a strong and efficient system to manage requests and projects effectively.
 
 ### What is Node.js?
 -- Node.js a run-time environment (RTE) that acts as an engine to power web applications.
@@ -38,17 +33,24 @@ Module 4 - Back End Development 1
 ### Why use Express?
 -- Express:
     - is easy for people to read and write.
-    - is easy for computers to parse (analyze and breakdown structured data,    like text or code, into individual components to understand or process it) and generate.
+    - is easy for computers to parse (analyze and breakdown structured data, like text or code, into individual components to understand or process it) and generate.
     - requires only Javascript, a widely used language, and is supported everywhere.
     - helps build different applications and API’s in a short period of time.
     - provides simple routing for requests made by the clients. 
     - provides middleware that’s responsible for making decisions to give the correct responses to the requests made by the client.
 
 
-#### What is middleware?
+#### What is Middleware?
 -- Middleware is like a series of helpers that process requests as they come into a web server. 
 -- Each step (middleware function) can pass the request to the next step, modify it, or end the process by sending a response back to the customer.
 -- This organized way of handling requests makes the server efficient and flexible.
+
+
+#### What are Endpoints?
+-- Endpoints are specific URLs in an API where requests are sent to access or modify data on a server. 
+-- Each endpoint is associated with an HTTP method (like GET, POST, PUT, DELETE) that defines the action to be performed. 
+    -4443wEERFor example, http://example.com/api/users might be used to manage user data.
+
 
 
 #### Wat is a ROUTE?
@@ -67,8 +69,6 @@ Module 4 - Back End Development 1
         - HEAD method is used to retrieve the headers of a resource without fetching the actual content.
         - OPTIONS method requests information about the available communication options for a resource or server. 
             - the server responds with the allowed methods (e.g., GET, POST, PUT, DELETE) and other supported capabilities, helping you understand what actions can be performed on the resource before making a specific request.
-
-
     
 
 #### CRUD Operatons (CREATE, READ, UPDATE, DELETE)
