@@ -16,7 +16,7 @@ Module 4 - Back End Development 1
 -- Rocket Elevators is a company that installs, constructs, and maintains elevators for homes, businesses, and industrial buildings. 
 -- Our website features a full range of elevator products designed for different types of buildings. 
 -- We also offer a contact form for potential clients to discuss their specific projects with us.
---This focus on customer service emphasizes the importance of having a strong and efficient system to manage requests and projects effectively.
+-- This focus on customer service emphasizes the importance of having a strong and efficient system to manage requests and projects effectively.
 
 ### What is Node.js?
 -- Node.js a run-time environment (RTE) that acts as an engine to power web applications.
@@ -50,17 +50,34 @@ Module 4 - Back End Development 1
 -- Each step (middleware function) can pass the request to the next step, modify it, or end the process by sending a response back to the customer.
 -- This organized way of handling requests makes the server efficient and flexible.
 
-#### Define a ROUTE and ROOT
-    -- Route: a specific endpoint defined in the application where certain logic is executed when a request is received. This endpoint is associated with a particular HTTP method (GET, POST, PUT, DELETE, etc.).
-        - A POST route is one that handles HTTP POST requests (See CRUD Operations).
-    -- ROOT of the Router: the ROOT path of the router is the base URL path that the router is responsible for.
+
+#### Wat is a ROUTE?
+ -- Route: a specific endpoint defined in the application where certain logic is executed when a request is received. This endpoint is associated with a particular HTTP method (GET, POST, PUT, DELETE, etc.).
+
+
+ #### Postman Methods (all on HTTP)
+        - POST request sends data to a server to create or update a resource.     
+            - a POST route is one that handles HTTP POST request.
+        - GET request gets data from another computer.
+            - using an HTTP method (loading a website is a GET request) is a GET request.
+        - PUT method is used to create or replace a resource on the server.
+            - it's similiar to a post resquest but it's IDEMPOTENT, which means making multiple PUT requests will have the same effect as making a single PUT request.
+        - DELETE method is used to remove a specified resource from the server.
+        - PATCH method modifies or makes partial updates to a resource on the server. Allows for more efficient updates.
+        - HEAD method is used to retrieve the headers of a resource without fetching the actual content.
+        - OPTIONS method requests information about the available communication options for a resource or server. 
+            - the server responds with the allowed methods (e.g., GET, POST, PUT, DELETE) and other supported capabilities, helping you understand what actions can be performed on the resource before making a specific request.
+
+
+    
 
 #### CRUD Operatons (CREATE, READ, UPDATE, DELETE)
--- CRUD operations are the fundamental tasks for handling information. 
-    - GET request to get data from another computer is the READ method in the CRUD operation. 
-    - POST request is used to send data to a server to create or update a resource. This is the CREATE method in the CRUD operation.
-    - PUT request is used to update an existing resource with new data. This is the UPDATE method in the CRUD operation.
-    - DELETE request removes an existing resource from the system. This is the DELETE method in the CRUD operation.
+-- CRUD operations are the 4 basic operations or fundamental tasks for handling data in a database or storage system. 
+    - CREATE is the POST request to send data to a server to create or update a resource. 
+    - READ is the GET request to retrieve data or resources.
+    - UPDATE is the PUT or PATCH method. PUT replaces the entire resource. PATCH updates specific parts of the resource.
+    - DELETE request removes an existing resource or data from the system. 
+
 
 #### Error Types
 -- Informational Responses (100-199)
