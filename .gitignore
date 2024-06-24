@@ -136,3 +136,4 @@ coverage/
 *.sublime-workspace
 
 .bash_history
+.bash_history
